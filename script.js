@@ -2,6 +2,9 @@ const app = document.getElementById("app")
 
 const formAction = () => {
     const form = document.getElementById('form')
+    form.onsubmit = (event) => {
+        event.preventDefault()
+    }
 }
 
 const startApp = () => {
@@ -19,6 +22,8 @@ const startApp = () => {
     
     `
     app.innerHTML = content
+
+    formAction()
 
 }
 
